@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScannedActivity"
+    tools:showIn="@layout/activity_scanned">
+
+
+    <TextView
+        android:id="@+id/scannedContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="50dp"
+        android:lineSpacingExtra="8sp"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/vehState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_editor_absoluteX="10dp" />
+
+    <EditText
+        android:id="@+id/vehNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scannedContent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="110dp"
+        android:digits="abcdefghijklmnopqrstuvwXYz1234567890"
+        android:ems="10"
+        android:hint="Enter vehicle number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="165dp" />
+
+    <Spinner
+        android:id="@+id/vehState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehNum"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:onClick="sendMessage"
+        android:text="Get Vehicle details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehState" />
+
+    <TextView
+        android:id="@+id/vehDetails"
+        android:layout_width="336dp"
+        android:layout_height="151dp"
+        android:lineSpacingExtra="10sp"
+        android:paddingLeft="28dp"
+        android:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/getQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Get Quote"
+        app:layout_constraintStart_toStartOf="@+id/vehDetails"
+        app:layout_constraintTop_toBottomOf="@+id/vehDetails"
+        app:layout_editor_absoluteY="110dp"
+        android:onClick="callRates"/>
+
+</android.support.constraint.ConstraintLayout>
