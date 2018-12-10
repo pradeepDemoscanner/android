@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,366 @@
     tools:context=".CoverageActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="331dp"
-        android:layout_height="280dp"
+        android:id="@+id/FinalQuote"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/FinalQuote"
+        android:textIsSelectable="false"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/QuoteNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="50dp"
+        android:gravity="left"
+        android:text="Quote #:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/DriverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="78dp"
+        android:gravity="left"
+        android:text="Name:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/DriverAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        android:textAppearance="@android:style/TextAppearance.Material.Display1"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="114dp"
+        android:gravity="left"
+        android:text="Address:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/VehicleDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/VehicleValue"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:text="Vehicle:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Coverages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="217dp"
+        android:gravity="left"
+        android:text="@string/Coverages"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/BodilyInjury"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="248dp"
+        android:gravity="left"
+        android:text="Bodily Injury:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PropertyDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="288dp"
+        android:gravity="left"
+        android:text="Property Damage:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/MedicalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="329dp"
+        android:gravity="left"
+        android:text="Medical Payments:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Collision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="361dp"
+        android:gravity="left"
+        android:text="Collision:"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/QuoteNumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/QuoteNum"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="0dp"
+        android:gravity="left"
+        android:text="JD201811"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/DriverNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="187dp"
+        android:layout_marginLeft="187dp"
+        android:layout_marginTop="81dp"
+        android:gravity="left"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/DriverAddressValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/DriverAddress"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="-7dp"
+        android:gravity="left"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/VehicleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="187dp"
+        android:gravity="left"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/BodilyInjuryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="225dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="256dp"
+        android:gravity="left"
+        android:text="25/100     $20"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PropertyDamageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="225dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="288dp"
+        android:gravity="left"
+        android:text="50/100     $60"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/MedicalPaymentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="226dp"
+        android:layout_marginLeft="226dp"
+        android:layout_marginTop="324dp"
+        android:gravity="left"
+        android:text="1000         $30"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/CollisionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="224dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="359dp"
+        android:gravity="left"
+        android:text="250         $500"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Discounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="384dp"
+        android:gravity="left"
+        android:text="@string/Discounts"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DiscountsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="426dp"
+        android:gravity="left"
+        android:text="-Anti Theft Device"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Surcharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="384dp"
+        android:gravity="left"
+        android:text="@string/Surcharge"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/SurchargeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="205dp"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="426dp"
+        android:gravity="left"
+        android:text="-Accident history"
+        android:textIsSelectable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Premium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="469dp"
+        android:gravity="left"
+        android:text="Premium:"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/PremiumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="193dp"
+        android:layout_marginLeft="193dp"
+        android:layout_marginTop="471dp"
+        android:gravity="left"
+        android:text="$610 for 6 months"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</android.widget.RelativeLayout>

@@ -141,5 +141,14 @@
     <string name="wifi_changing_network">Requesting connection to network\u2026</string>
     <string name="preferences_history_summary">Please scan Driver License barcode( back of the DL)</string>
     <string name="title_activity_scanned">ScannedActivity</string>
-    <string name="welcomeText">Please Scan the driving license to start with</string>
+    <string name="welcomeText">Please Scan the driving license barcode (back of the DL)</string>
+
+    <string name="Gather"><u>Gather Information</u></string>
+    <string name="Confirmation"><u>Confirmation</u></string>
+    <string name="DriverInfo"><u>Driver Info</u></string>
+    <string name="FinalQuote"><u>Final Quote</u></string>
+    <string name="LicensePlate"><u>Vehicle Info</u></string>
+    <string name="Coverages"><u>Coverages</u></string>
+    <string name="Discounts"><u>Discounts</u></string>
+    <string name="Surcharge"><u>Surcharge</u></string>
 </resources>

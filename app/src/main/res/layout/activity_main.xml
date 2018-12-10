@@ -8,20 +8,36 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/welcome"
-        android:layout_width="312dp"
-        android:layout_height="109dp"
+        android:id="@+id/GatherInformation"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/Gather"
+        android:textIsSelectable="false"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="106dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="83dp"
         android:gravity="center"
         android:text="@string/welcomeText"
         android:textIsSelectable="true"
         android:textSize="25dp"
-        tools:text="Please Scan the driving license to start with" />
+        tools:text="Please Scan the driving license barcode (back of the DL)" />
 
     <TextView
         android:id="@+id/scan_format"
@@ -42,10 +58,10 @@
         android:id="@+id/imageView"
         android:layout_width="138dp"
         android:layout_height="107dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="133dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="243dp"
         android:src="@drawable/scanme" />
-
 
 </android.widget.RelativeLayout>
