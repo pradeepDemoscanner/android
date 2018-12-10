@@ -48,7 +48,7 @@ public class MainActivity extends  Activity implements OnClickListener {
         if (android.os.Build.VERSION.SDK_INT > 9)
         {
             StrictMode.ThreadPolicy policy = new
-            StrictMode.ThreadPolicy.Builder().permitAll().build();
+                    StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
 
@@ -59,19 +59,20 @@ public class MainActivity extends  Activity implements OnClickListener {
     public void onClick(View v) {
         if(v.getId()==R.id.imageView){
 
-            /*Intent intent = new Intent(getApplicationContext(),CaptureActivity.class);
+            Intent intent = new Intent(getApplicationContext(),CaptureActivity.class);
             intent.setAction("com.google.zxing.client.android.SCAN");
 
             intent.putExtra("SCAN_MODE", "PDF417_MODE");
             intent.putExtra("SAVE_HISTORY", false);
-            startActivityForResult(intent, 0);*/
+            startActivityForResult(intent, 0);
 
-            Intent intent=new Intent(MainActivity.this,ScannedActivity.class);
+            /*Intent intent=new Intent(MainActivity.this,ScannedActivity.class);
             String result = "First Name: John\n" +
-                    "Last Name: Doe\n" +
-                    "Address: Current Address";
+                    "Last Name: qwertyuasdasd asdsadsaa\n" +
+                    "Address: 2685 Sand Rd, Arlington Heights, IL, 60070\n" +
+                    "License Expiration Date: 02/2050";
             intent.putExtra("MyStudentObjectAsString", result);
-            startActivityForResult(intent,2);
+            startActivityForResult(intent,2);*/
 
         }
     }
@@ -80,7 +81,7 @@ public class MainActivity extends  Activity implements OnClickListener {
 //retrieve scan result
         super.onActivityResult(requestCode, resultCode, intent);
         // check if the request code is same as what is passed  here it is 2
-        if(requestCode==2 && intent != null)
+        /*if(requestCode==2 && intent != null)
         {
             setContentView(R.layout.content_scanned);
             intent.putExtra("MyStudentObjectAsString", "sample");
@@ -88,10 +89,10 @@ public class MainActivity extends  Activity implements OnClickListener {
         }
         if(intent == null){
 
-        }
+        }*/
 
         System.out.println("after scan");
-        /*if (requestCode == 0) {
+        if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
                 String scanContent = intent.getStringExtra("SCAN_RESULT");
                 String scanFormat = intent.getStringExtra("SCAN_RESULT_FORMAT");
@@ -113,7 +114,7 @@ public class MainActivity extends  Activity implements OnClickListener {
                         "No scan data received!", Toast.LENGTH_SHORT);
                 toast.show();
             }
-        }*/
+        }
 
     }
 
@@ -165,7 +166,7 @@ public class MainActivity extends  Activity implements OnClickListener {
             if(s.contains("DBA"))
                 dataContains += (s.replace("DBA", "License Expiration Date: ")+ "\n");
             if(s.contains("DAG"))
-                dataContains += (s.replace("DAG", "Current address: ")+ "\n");
+                dataContains += (s.replace("DAG", "Current Address: ")+ "\n");
             if(s.contains("DAI"))
                 dataContains += (s.replace("DAI", "City: ")+ "\n");
             if(s.contains("DAJ"))

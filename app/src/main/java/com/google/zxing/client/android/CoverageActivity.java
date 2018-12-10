@@ -5,6 +5,7 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONException;
 
@@ -19,10 +20,21 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class CoverageActivity extends Activity {
 
+    private TextView vehValue, vehYearValue, vehMakeValue, vehModelValue, vehSubModelValue, driverName, driverAddress;
+    private String bodilyInjuryValue, propertyDamageValue, medicalPaymentValue, collisionValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String coverageDetails = "";
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coverage);
+        vehValue = (TextView)findViewById(R.id.VehicleValue);
+        vehValue.setText(ScannedActivity.getVehicleDetails());
+        driverName = (TextView)findViewById(R.id.DriverNameValue);
+        driverName.setText(ScannedActivity.getDriverName());
+        driverAddress = (TextView)findViewById(R.id.DriverAddressValue);
+        driverAddress.setText(ScannedActivity.getAddress());
 
         if (android.os.Build.VERSION.SDK_INT > 9)
         {
@@ -31,7 +43,7 @@ public class CoverageActivity extends Activity {
             StrictMode.setThreadPolicy(policy);
         }
         try {
-            getResponseText();
+            coverageDetails = getResponseText();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
@@ -44,8 +56,8 @@ public class CoverageActivity extends Activity {
 
         URL url = new URL("https://77tjsn9jrl.execute-api.us-east-2.amazonaws.com/default/QuoteService");
         HttpsURLConnection httpconn = (HttpsURLConnection)url.openConnection();
-        //httpconn.setDoOutput(true);
-        //httpconn.setRequestMethod("GET");
+        httpconn.setDoOutput(true);
+        httpconn.setRequestMethod("GET");
         //httpconn.setRequestProperty("Content-Type", "application/json");
 
 
